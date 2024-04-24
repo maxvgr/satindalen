@@ -3,13 +3,27 @@
 // -----------------------------------------------------------------------------
 
 .nav {
+  height: 100%;
+
   &__list {
+    display: flex;
+    height: 100%;
   }
 
   &__item {
+    height: 100%;
   }
 
   &__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 18px;
+    transition: $transition-time ease;
+
+    &:hover {
+      background: rgba(239, 239, 239, 1);
+    }
   }
 
 

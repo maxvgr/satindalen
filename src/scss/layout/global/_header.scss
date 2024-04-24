@@ -3,9 +3,79 @@
 // -----------------------------------------------------------------------------
 
 #header {
+  a {
+    &.grey-hover {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      transition: $transition-time ease;
 
+      &:hover {
+        background: rgba(239, 239, 239, 1);
+      }
+    }
+  }
 }
 
 .header {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    align-items: center;
+    height: 79px;
+  }
 
+  &__menu {
+    height: 100%;
+    padding-left: 42px;
+  }
+
+  &__logo {
+    justify-self: center;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    height: 100%;
+    padding-right: 60px;
+  }
+
+  &__callback {
+    height: 100%;
+
+    a {
+      padding: 0 40px;
+    }
+  }
+
+  &__callmenu {
+    height: 100%;
+    margin-right: 87px;
+
+    a {
+      padding: 0 12px;
+    }
+  }
+
+  &__basket,
+  &__search {
+    height: 100%;
+
+    a {
+      padding: 0 7px;
+    }
+  }
+
+  &__login {
+    height: 100%;
+
+    a {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      padding: 0 17px;
+    }
+  }
 }
