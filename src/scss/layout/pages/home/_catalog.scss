@@ -1,0 +1,49 @@
+#catalog {
+  .container {
+    max-width: 100%;
+    padding: 60px;
+  }
+
+  .catalog {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(11, 1fr);
+      gap: 40px;
+    }
+
+    &__link {
+      display: flex;
+      flex-direction: column;
+      gap: 21px;
+      align-items: center;
+      transition: 4s ease;
+
+      picture {
+        max-width: fit-content;
+        max-height: 91px;
+        transition: $transition-time ease;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18.29px;
+        text-align: center;
+        transition: $transition-time ease;
+      }
+
+      &:hover {
+        picture {
+          opacity: 0.5;
+
+          // filter: blur(1px);
+        }
+
+        p {
+          color: $link-hover-color;
+        }
+      }
+    }
+  }
+
+}

@@ -8,7 +8,8 @@ $color-text__primary: rgba(67, 67, 67, 1);;
 $color-text__black: #000000;
 $color-text__white: #ffffff;
 
-$link-hover-color: #60d2ff !default;
+$link-hover-color: rgba(220, 163, 148, 1)!default;
+
 
 body {
   color: $color-text__primary;
