@@ -43,3 +43,40 @@ new Swiper("#slider .swiper", {
   },
 
 });
+
+
+new Swiper("#best-offers .swiper", {
+  modules: [Navigation, Autoplay],
+
+  slidesPerView: 5,
+  spaceBetween: 20,
+  // loop: true,
+
+  speed: 2000,
+
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
+
+  // breakpoints: {
+  //   768: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 20
+  //   },
+  //   1200: {
+  //     slidesPerView: 3.5,
+  //     spaceBetween: 20
+  //   },
+  //   1400: {
+  //     slidesPerView: 4.8,
+  //     spaceBetween: 20
+  //   }
+  // },
+
+  navigation: {
+    nextEl: "#best-offers .swiper-button-next",
+    prevEl: "#best-offers .swiper-button-prev",
+  },
+
+});
