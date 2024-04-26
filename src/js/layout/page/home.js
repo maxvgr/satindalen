@@ -2,6 +2,8 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 
 import {
   Navigation,
@@ -122,3 +124,5 @@ new Swiper("#brands .swiper", {
     clickable: true,
   },
 });
+
+new Accordion('.accordion-container');

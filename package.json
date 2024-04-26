@@ -78,6 +78,7 @@
     "create": "node ./node_scripts/create.js"
   },
   "dependencies": {
+    "accordion-js": "^3.3.4",
     "imask": "^7.4.0",
     "swiper": "^11.1.1",
     "vanilla-lazyload": "^17.8.5"
