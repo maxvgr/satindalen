@@ -1,0 +1,52 @@
+#brands {
+  .container {
+    max-width: 100%;
+    padding: 0 60px;
+  }
+}
+
+.brands {
+  .swiper {
+    &-slide {
+      height: 170px;
+      border: 1px solid rgba(217, 217, 217, 1);
+      border-radius: 3px;
+
+      &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        transition: $transition-time ease;
+
+        picture {
+          opacity: 0.5;
+          transition: $transition-time ease;
+        }
+
+        &:hover {
+          picture {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &-pagination {
+      position: relative;
+      margin-top: 43px;
+
+      &-bullet {
+        width: 41px;
+        height: 5px;
+        border-radius: 0;
+        background: rgba(235, 235, 235, 1);
+        opacity: 1;
+
+        &-active {
+          background: rgba(154, 154, 154, 1);
+        }
+      }
+    }
+  }
+}
