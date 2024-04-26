@@ -1,0 +1,85 @@
+#about {
+  .container {
+    max-width: 100%;
+    padding: 80px 0 0 60px;
+  }
+}
+
+.about {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+
+    picture {
+      max-height: 780px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 22.5px;
+
+    p {
+      padding-bottom: 15px;
+    }
+  }
+
+      /* Стили для текстового поля с кнопкой "Развернуть" */
+      .ac {
+        border: none;
+      }
+
+      .ac-header {
+        display: inline-flex;
+        width: auto;
+
+      }
+
+      .ac-trigger {
+        color: rgba(154, 154, 154, 1);
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18.29px;
+
+        &::after {
+          display: none;
+        }
+
+        span.close {
+          display: none;
+        }
+      }
+
+      .is-active {
+        .ac-trigger {
+          span.open {
+            display: none;
+          }
+
+          span.close {
+            display: block;
+          }
+        }
+
+      }
+
+      .ac-text {
+        color: rgba(51, 51, 51, 1) !important;
+        font-size: 15px !important;
+        font-family: $font-default !important;
+        line-height: 22.5px !important;
+
+        p {
+          padding-bottom: 15px;
+        }
+      }
+
+      .button {
+        margin-top: 55px;
+      }
+}
