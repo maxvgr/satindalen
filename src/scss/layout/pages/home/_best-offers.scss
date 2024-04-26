@@ -12,6 +12,17 @@
     &-slide {
       picture {
         height: 387px;
+        transition: $transition-time ease;
+      }
+
+      &__link {
+        &:hover {
+          picture {
+            filter: grayscale(90%);
+
+            // filter: brightness(140%);
+          }
+        }
       }
 
       &__marks {
@@ -69,7 +80,22 @@
         }
       }
     }
+
+    .swiper-pagination {
+      position: relative;
+      margin-top: 43px;
+
+      &-bullet {
+        width: 41px;
+        height: 5px;
+        border-radius: 0;
+        background: rgba(235, 235, 235, 1);
+        opacity: 1;
+
+        &-active {
+          background: rgba(154, 154, 154, 1);
+        }
+      }
+    }
   }
-
-
 }

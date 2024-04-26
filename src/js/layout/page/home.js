@@ -1,11 +1,13 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import {
   Navigation,
   Autoplay,
   Mousewheel,
+  Pagination,
 } from "swiper/modules";
 
 new Swiper("#slider .swiper", {
@@ -46,7 +48,7 @@ new Swiper("#slider .swiper", {
 
 
 new Swiper("#best-offers .swiper", {
-  modules: [Navigation, Autoplay],
+  modules: [Pagination, Autoplay],
 
   slidesPerView: 5,
   spaceBetween: 20,
@@ -54,10 +56,10 @@ new Swiper("#best-offers .swiper", {
 
   speed: 2000,
 
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
 
   // breakpoints: {
   //   768: {
@@ -74,9 +76,14 @@ new Swiper("#best-offers .swiper", {
   //   }
   // },
 
-  navigation: {
-    nextEl: "#best-offers .swiper-button-next",
-    prevEl: "#best-offers .swiper-button-prev",
-  },
+  // navigation: {
+  //   nextEl: "#best-offers .swiper-button-next",
+  //   prevEl: "#best-offers .swiper-button-prev",
+  // },
 
+  pagination: {
+    el: '#best-offers .swiper-pagination',
+    clickable: true,
+    // type: 'custom',
+  },
 });
