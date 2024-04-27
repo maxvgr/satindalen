@@ -74,7 +74,7 @@
     i {
       display: inline-block;
       vertical-align: middle;
-      background: url("/assets/images/global/payment.svg") no-repeat;
+      background: url("../assets/images/global/payment.svg") no-repeat;
       background-position: 0 0;
       opacity: 0.5;
       transition: opacity 0.5s ease;
@@ -136,10 +136,10 @@
       &.footer__pays--paykeeper {
         width: 120px;
         height: 21px;
-        background: url("/assets/images/global/paykeeper-w.jpg") 0 0 no-repeat;
+        background: url("../assets/images/global/paykeeper-w.jpg") 0 0 no-repeat;
 
         &:hover {
-          background: url("/assets/images/global/paykeeper-c.jpg") 0 0 no-repeat;
+          background: url("../assets/images/global/paykeeper-c.jpg") 0 0 no-repeat;
         }
       }
     }
