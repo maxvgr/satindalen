@@ -3,38 +3,60 @@
 // -----------------------------------------------------------------------------
 
 .nav {
-  height: 100%;
-
   &__list {
     display: flex;
     height: 100%;
   }
 
   &__item {
-    height: 100%;
   }
 
   &__link {
     display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 18px;
     transition: $transition-time ease;
-
-    &:hover {
-      background: rgba(239, 239, 239, 1);
-    }
   }
 
-
-
   &--header {
-    .nav__item {
+    height: 100%;
 
+    .nav__item {
+      height: 100%;
     }
 
     .nav__link {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 18px;
 
+      &:hover {
+        background: rgba(239, 239, 239, 1);
+      }
+    }
+  }
+
+  &--footer {
+    .nav__list {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .nav__item {
+    }
+
+    .current > .nav__link {
+      color: rgba(195, 195, 195, 1);
+    }
+
+    .nav__link {
+      color: $color-text__white;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 20.72px;
+
+      &:hover {
+        color: rgba(195, 195, 195, 1);
+      }
     }
   }
 }

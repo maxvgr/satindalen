@@ -3,7 +3,195 @@
 // -----------------------------------------------------------------------------
 
 #footer {
+  .container {
+    min-width: 100%;
+    padding: 60px;
+  }
 }
 
 .footer {
+  background: rgba(41, 41, 41, 1);
+  color: $color-text__footer;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 0.9fr) 1.5fr;
+    gap: 60px;
+  }
+
+  &__title {
+    display: inline-flex;
+    padding-bottom: 25px;
+    color: rgba(195, 195, 195, 1);
+    font-size: 15px;
+    line-height: 18.29px;
+    text-transform: uppercase;
+    transition: $transition-time ease;
+
+    &:hover {
+      color: $color-text__white;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 38px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20.72px;
+  }
+
+  &__link {
+    transition: $transition-time ease;
+
+    &:hover {
+      color: $color-text__white;
+    }
+  }
+
+  &__tg {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__pays {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    background: #333333;
+
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      background: url("/assets/images/global/payment.svg") no-repeat;
+      background-position: 0 0;
+      opacity: 0.5;
+      transition: opacity 0.5s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.footer__pays--cash {
+        width: 20px;
+        height: 20px;
+        background-position: 0 -298px;
+
+        &:hover {
+          background-position: 0 -198px;
+        }
+      }
+
+      &.footer__pays--mastercard {
+        width: 24px;
+        height: 16px;
+        background-position: -279px -300px;
+
+        &:hover {
+          background-position: -327px -200px;
+        }
+      }
+
+      &.footer__pays--visa {
+        width: 32px;
+        height: 10px;
+        background-position: -40px -304px;
+
+        &:hover {
+          background-position: -40px -204px;
+        }
+      }
+
+      &.footer__pays--mir {
+        width: 36px;
+        height: 20px;
+        background-position: -357px -298px;
+
+        &:hover {
+          background-position: -449px -198px;
+        }
+      }
+
+      &.footer__pays--maestro {
+        width: 24px;
+        height: 16px;
+        background-position: -279px -300px;
+
+        &:hover {
+          background-position: -371px -200px;
+        }
+      }
+
+      &.footer__pays--paykeeper {
+        width: 120px;
+        height: 21px;
+        background: url("/assets/images/global/paykeeper-w.jpg") 0 0 no-repeat;
+
+        &:hover {
+          background: url("/assets/images/global/paykeeper-c.jpg") 0 0 no-repeat;
+        }
+      }
+    }
+  }
+
+  &__subscription {
+    // margin-top: 44px;
+
+    span {
+      display: inline-flex;
+      padding-bottom: 12px;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 20.72px;
+    }
+
+    .input-mail {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 20px;
+      border: 1px solid rgba(119, 119, 119, 1);
+
+      input {
+        flex: 1;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      input, button {
+        border: 0;
+        outline: none;
+        background: none;
+        color: $color-text__white;
+      }
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 17px;
+    line-height: 20.72px;
+
+    a {
+      transition: $transition-time ease;
+
+      &:hover {
+       color: $color-text__white;
+      }
+    }
+  }
 }

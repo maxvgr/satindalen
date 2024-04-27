@@ -41,6 +41,7 @@
       }
 
       .ac-trigger {
+        padding: 0;
         color: rgba(154, 154, 154, 1);
         font-weight: 400;
         font-size: 15px;
@@ -69,6 +70,7 @@
       }
 
       .ac-text {
+        padding: 10px 0 0 !important;
         color: rgba(51, 51, 51, 1) !important;
         font-size: 15px !important;
         font-family: $font-default !important;
