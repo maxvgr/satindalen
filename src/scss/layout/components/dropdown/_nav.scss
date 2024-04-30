@@ -20,9 +20,6 @@
   ul {
     width: 100%;
     min-width: 220px;
-    // padding: 8px 0;
-    // border-radius: $border-radius;
-
     background-color: $palette-white;
     transition: $transition-time ease;
   }
@@ -39,26 +36,12 @@
       content: "";
       position: absolute;
     }
-
-    // &::after {
-    //   content: "";
-    //   width: 16px;
-    //   height: 16px;
-
-    //   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='white' stroke-width='2' stroke-linecap='square' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-    //   background-position: center;
-    //   background-size: contain;
-    //   background-repeat: no-repeat;
-
-    //   filter: brightness(0);
-    //   transition: $transition-time ease;
-    // }
   }
 
   & > ul {
     position: absolute;
     z-index: 3;
-    top: calc(100%);
+    top: calc(100% + 1px);
     right: 0;
     width: 220px;
 
@@ -161,6 +144,82 @@
         display: block;
         width: 40%;
         height: 100%;
+      }
+    }
+  }
+}
+
+.dropdown-catalog {
+  // position: relative;
+
+  @media (hover: hover) {
+    &:hover {
+      & > .catalog-menu {
+        opacity: 1;
+        visibility: visible;
+
+        & > ul {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  ul {
+    width: 100%;
+    min-width: 220px;
+    background-color: $palette-white;
+    transition: $transition-time ease;
+  }
+
+  & > a  {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    // cursor: pointer;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    // }
+  }
+
+  & > .catalog-menu {
+    position: absolute;
+    z-index: 3;
+    top: 79px;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    padding: 46px 103px;
+    background-color: $palette-white;
+    box-shadow: 0 4px 6px 0 rgba(16, 73, 138, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition-time ease;
+
+    & > ul {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    a {
+      // display: flex;
+      // gap: 5px;
+      // align-items: center;
+      // justify-content: center;
+      // padding: 12px 20px;
+      // color: #231f20;
+
+      transition: $transition-time ease;
+
+      @media (hover: hover) {
+        &:hover {
+          color: $link-hover-color;
+        }
       }
     }
   }

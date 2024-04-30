@@ -3,7 +3,9 @@
     <div class="header__menu">
       <nav class="nav nav--header">
         <ul class="nav__list">
-          <li class="nav__item current"><a href="#" class="nav__link">Каталог</a></li>
+          <li class="nav__item current dropdown-catalog"><a href="#" class="nav__link">Каталог</a>
+            <include src="layout/global/catalog-menu.html"></include>
+          </li>
           <li class="nav__item"><a href="#" class="nav__link">Наш магазин</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Доставка и оплата</a></li>
         </ul>
@@ -56,6 +58,10 @@
             <path d="M8 8L6 2C5.83333 1.5 5.1 0.5 3.5 0.5C1.9 0.5 0.5 0.5 0 0.5" stroke="#292929" />
           </svg>
         </a>
+        <div class="basket-goods">
+          3
+        </div>
+        <!-- /.basket-goods -->
       </div>
       <!-- /.header__basket -->
       <div class="header__search">

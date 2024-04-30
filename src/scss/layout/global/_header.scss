@@ -23,11 +23,42 @@
     grid-template-columns: 3fr 1fr 3fr;
     align-items: center;
     height: 79px;
+    border-bottom: 1px solid rgba(232, 232, 232, 1);
   }
 
   &__menu {
     height: 100%;
     padding-left: 42px;
+
+    .catalog-menu {
+      ul {
+        color: $color-text__primary;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 23.16px;
+
+        li:not(:first-child) {
+          padding-top: 18px;
+        }
+
+        &:first-child {
+          font-weight: 600;
+          text-transform: uppercase;
+
+          li:not(:first-child) {
+            padding-top: 22px;
+          }
+        }
+      }
+
+      &__title {
+        display: block;
+        padding-bottom: 15px;
+        font-weight: 600;
+      }
+
+    }
+
   }
 
   &__logo {
@@ -67,6 +98,28 @@
       padding: 0 7px;
     }
   }
+
+  &__basket {
+    position: relative;
+
+    .basket-goods {
+      position: absolute;
+      top: 33%;
+      right: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(91, 91, 91, 1);
+      color: $color-text__white;
+      font-size: 8px;
+      line-height: 11.2px;
+    }
+
+  }
+
 
   &__login {
     height: 100%;
