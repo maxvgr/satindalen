@@ -9,6 +9,12 @@
       position: relative;
 
       picture {
+        @include breakpoint($breakpoint-tablet-big) {
+          height: 476px;
+        }
+
+        height: 680px;
+
         &::before {
             content: "";
             position: absolute;
@@ -22,12 +28,33 @@
       }
 
       &__text {
+        @include breakpoint($breakpoint-tablet-big) {
+          top: 90px;
+        }
+        @include breakpoint($breakpoint-mobile) {
+          left: inherit;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 0 10px;
+        }
+
         position: absolute;
         top: 144px;
         left: 95px;
         color: $color-text__white;
 
         h2 {
+          @include breakpoint($breakpoint-tablet-big) {
+            font-size: 43px;
+            line-height: 55px;
+          }
+          @include breakpoint($breakpoint-mobile) {
+            font-size: 27px;
+            line-height: 38px;
+            text-align: center;
+          }
+
           font-weight: $weight-Regular;
           font-size: 65px;
           font-family: $font-title;
@@ -37,6 +64,15 @@
         }
 
         span {
+          @include breakpoint($breakpoint-tablet-big) {
+            font-size: 23px;
+            line-height: 32px;
+          }
+          @include breakpoint($breakpoint-mobile) {
+            font-size: 17px;
+            line-height: 23px;
+          }
+
           display: flex;
           padding-top: 19px;
           font-weight: 500;
@@ -45,6 +81,10 @@
         }
 
         .button {
+          @include breakpoint($breakpoint-mobile) {
+            background: rgba(41, 41, 41, 0.28);
+          }
+
           margin-top: 69px;
         }
       }
