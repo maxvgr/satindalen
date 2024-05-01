@@ -18,12 +18,37 @@
 }
 
 .header {
+  &--fixed {
+    position: fixed;
+    z-index: 20;
+
+    top: 0;
+    left: 50%;
+    width: 100%;
+    opacity: 1;
+
+    transform: translateY(-50%);
+    transition: .3s all;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
     align-items: center;
     height: 79px;
     border-bottom: 1px solid rgba(232, 232, 232, 1);
+    transition: .5s ease;
+
+    &--fixed {
+      position: fixed;
+      z-index: 20;
+      top: -79px;
+      left: 0;
+      width: 100%;
+      background: $palette-white;
+      transform: translateY(100%);
+      transition: .5s ease;
+    }
   }
 
   &__menu {

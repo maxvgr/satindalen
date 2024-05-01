@@ -3,12 +3,7 @@
 
   @media (hover: hover) {
     &:hover {
-      // & > a,
-      // & > span {
-      //   &::after {
-      //     transform: rotate(180deg);
-      //   }
-      // }
+      background: rgba(239, 239, 239, 1);
 
       & > ul {
         opacity: 1;
@@ -154,6 +149,8 @@
 
   @media (hover: hover) {
     &:hover {
+      background: rgba(239, 239, 239, 1);
+
       & > .catalog-menu {
         opacity: 1;
         visibility: visible;
@@ -192,7 +189,7 @@
     top: 79px;
     left: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     width: 100%;
     padding: 46px 103px;
     background-color: $palette-white;
