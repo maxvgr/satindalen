@@ -1,5 +1,15 @@
 #about {
   .container {
+    @include breakpoint($breakpoint-notebook) {
+      padding: 66px 0 0 30px;
+    }
+    @include breakpoint($breakpoint-tablet-big) {
+      padding: 60px 0 0 20px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      padding: 40px 0 0 20px;
+    }
+
     max-width: 100%;
     padding: 80px 0 0 60px;
   }
@@ -7,11 +17,19 @@
 
 .about {
   &__wrapper {
+    @include breakpoint($breakpoint-mobile) {
+      grid-template-columns: 1fr;
+    }
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
 
     picture {
+      @include breakpoint($breakpoint-mobile) {
+        display: none;
+      }
+
       max-height: 780px;
     }
   }
@@ -82,6 +100,10 @@
       }
 
       .button {
+        @include breakpoint($breakpoint-notebook) {
+          margin-bottom: 20px;
+        }
+
         margin-top: 55px;
       }
 }
