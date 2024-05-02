@@ -4,6 +4,16 @@
 
 #footer {
   .container {
+    @include breakpoint($breakpoint-laptop) {
+      padding: 40px;
+    }
+    @include breakpoint($breakpoint-tablet-big) {
+      padding: 24px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      padding: 20px;
+    }
+
     min-width: 100%;
     padding: 60px;
   }
@@ -14,19 +24,69 @@
   color: $color-text__footer;
 
   &__wrapper {
+    @include breakpoint($breakpoint-laptop) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @include breakpoint($breakpoint-tablet-big) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint($breakpoint-mobile) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+
     display: grid;
     grid-template-columns: repeat(5, 0.9fr) 1.5fr;
     gap: 60px;
   }
 
+  &__col {
+    @include breakpoint($breakpoint-mobile) {
+      border-bottom: 1px solid rgba(82, 82, 82, 1);
+    }
+
+    &.is-active > .nav--footer {
+      display: block;
+      padding: 0 0 15px 15px;
+    }
+
+    &.is-active > .footer__title::after {
+      transform: rotate(90deg);
+    }
+  }
+
   &__title {
+    @include breakpoint($breakpoint-mobile) {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 15px;
+    }
+
     display: inline-flex;
     padding-bottom: 25px;
     color: rgba(195, 195, 195, 1);
     font-size: 15px;
     line-height: 18.29px;
     text-transform: uppercase;
+    white-space: nowrap;
     transition: $transition-time ease;
+
+    &::after {
+      @include breakpoint($breakpoint-mobile) {
+        content: "";
+        width: 9px;
+        height: 17px;
+        background-image: url("data:image/svg+xml,%3Csvg width='11' height='19' viewBox='0 0 11 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L9.5 9.5L1 18' stroke='%23ADADAD'/%3E%3C/svg%3E");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: $transition-time ease;
+      }
+    }
 
     &:hover {
       color: $color-text__white;
@@ -34,6 +94,10 @@
   }
 
   &__contacts {
+    @include breakpoint($breakpoint-mobile) {
+      align-items: center;
+    }
+
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -58,6 +122,23 @@
   }
 
   &__right {
+    @include breakpoint($breakpoint-laptop) {
+      flex-direction: row;
+      grid-column: 1/6;
+      gap: 45px;
+      align-items: flex-start;
+    }
+    @include breakpoint($breakpoint-tablet-big) {
+      flex-direction: column;
+      grid-column: 2/5;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-column: auto;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      align-items: center;
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -180,11 +261,25 @@
   }
 
   &__copyright {
+    @include breakpoint($breakpoint-laptop) {
+      justify-content: space-between;
+      height: calc(100% + 30px);
+    }
+    @include breakpoint($breakpoint-mobile) {
+      align-items: center;
+    }
+
     display: flex;
     flex-direction: column;
     gap: 20px;
     font-size: 17px;
     line-height: 20.72px;
+
+    p {
+      @include breakpoint($breakpoint-mobile) {
+        text-align: center;
+      }
+    }
 
     a {
       transition: $transition-time ease;

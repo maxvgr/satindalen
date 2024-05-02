@@ -127,3 +127,42 @@ new Swiper("#brands .swiper", {
 });
 
 new Accordion('.accordion-container');
+
+const footertitle01 = document.querySelector(".footer__col--01 .footer__title");
+const footertitle02 = document.querySelector(".footer__col--02 .footer__title");
+const footertitle03 = document.querySelector(".footer__col--03 .footer__title");
+const footertitle04 = document.querySelector(".footer__col--04 .footer__title");
+// const footertitle = document.querySelectorAll(".footer__title");
+const footernav01 = document.querySelector(".footer__col--01");
+const footernav02 = document.querySelector(".footer__col--02");
+const footernav03 = document.querySelector(".footer__col--03");
+const footernav04 = document.querySelector(".footer__col--04");
+// const diplomsgrid = document.querySelector(".education__diploms-wrapper");
+
+if (document.querySelector('.footer__col--01')) {
+  footertitle01.addEventListener("click", () => {
+    footernav01.classList.toggle("is-active");
+    // diplomsgrid.classList.toggle("is-active");
+  });
+};
+if (document.querySelector('.footer__col--02')) {
+  footertitle02.addEventListener("click", () => {
+    footernav02.classList.toggle("is-active");
+  });
+};
+if (document.querySelector('.footer__col--03')) {
+  footertitle03.addEventListener("click", () => {
+    footernav03.classList.toggle("is-active");
+  });
+};
+if (document.querySelector('.footer__col--04')) {
+  footertitle04.addEventListener("click", () => {
+    footernav04.classList.toggle("is-active");
+  });
+};
+
+// diplomclose.addEventListener("click", () => {
+//   diplombtn.classList.toggle("is-active");
+//   diplomsgrid.classList.toggle("is-active");
+//   diplomclose.classList.toggle("is-active");
+// });

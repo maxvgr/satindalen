@@ -45,6 +45,17 @@
   }
 
   &--footer {
+    @include breakpoint($breakpoint-mobile) {
+      display: none;
+
+      &.is-active {
+        display: block;
+        padding: 0 0 15px 15px;
+      }
+    }
+
+
+
     .nav__list {
       flex-direction: column;
       gap: 12px;
@@ -58,6 +69,12 @@
     }
 
     .nav__link {
+      @include breakpoint($breakpoint-mobile) {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15.85px;
+      }
+
       color: $color-text__white;
       font-weight: 600;
       font-size: 17px;
