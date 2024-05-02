@@ -2,6 +2,19 @@
   min-width: 300px;
 
   h2 {
+    @include breakpoint($breakpoint-tablet-big) {
+      font-size: 27px;
+      line-height: 36px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 25px;
+      line-height: 33px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      font-size: 19px;
+      line-height: 25px;
+    }
+
     font-weight: $weight-Regular;
     font-size: 41px;
     font-family: $font-title;

@@ -1,17 +1,50 @@
 #catalog {
   .container {
+    @include breakpoint($breakpoint-mobile) {
+      padding: 25px 15px;
+    }
+
     max-width: 100%;
     padding: 60px;
   }
 
   .catalog {
     &__wrapper {
+      @include breakpoint($breakpoint-mobile) {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
       display: grid;
-      grid-template-columns: repeat(11, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
       gap: 40px;
+
+      &:not(:last-child) {
+          border-bottom: 1px solid rgba(232, 232, 232, 1);
+      }
+    }
+
+    &__item {
+      @include breakpoint($breakpoint-mobile) {
+        &:not(:last-child) {
+          padding-bottom: 20px;
+          border-bottom: 1px solid rgba(232, 232, 232, 1);
+        }
+
+        &:not(:first-child) {
+          padding-top: 20px;
+        }
+
+      }
     }
 
     &__link {
+      @include breakpoint($breakpoint-mobile) {
+        flex-direction: row;
+        gap: 50px;
+        justify-content: flex-start;
+      }
+
       display: flex;
       flex-direction: column;
       gap: 21px;
@@ -19,12 +52,29 @@
       transition: 4s ease;
 
       picture {
+        @include breakpoint($breakpoint-mobile) {
+          flex: none;
+          width: 45px;
+          min-width: 45px;
+
+          height: 45px;
+          min-height: 45px;
+          max-height: 45px;
+        }
+
         max-width: fit-content;
+        min-height: 90px;
         max-height: 91px;
         transition: $transition-time ease;
       }
 
       p {
+        @include breakpoint($breakpoint-mobile) {
+          flex: 1;
+          font-weight: 400;
+          text-align: left;
+        }
+
         font-weight: 600;
         font-size: 15px;
         line-height: 18.29px;
