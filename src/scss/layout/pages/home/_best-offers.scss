@@ -1,5 +1,12 @@
 #best-offers {
   .container {
+    @include breakpoint($breakpoint-tablet-big) {
+      padding: 60px 30px;
+    }
+    @include breakpoint($breakpoint-tablet-big) {
+      padding: 40px 20px;
+    }
+
     max-width: 100%;
     padding: 80px 60px;
   }
@@ -11,7 +18,11 @@
 
     &-slide {
       picture {
-        height: 387px;
+        @include breakpoint($breakpoint-notebook) {
+          height: 311px;
+        }
+
+        height: 344px;
         transition: $transition-time ease;
       }
 

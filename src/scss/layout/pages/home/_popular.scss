@@ -52,8 +52,10 @@
           max-height: 450px;
 
           &:nth-child(3) {
-            grid-row: auto;
-            grid-column: 1/2;
+            @include breakpoint($breakpoint-tablet) {
+              grid-row: auto;
+              grid-column: 1/2;
+            }
           }
         }
 
