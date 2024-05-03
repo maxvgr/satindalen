@@ -36,8 +36,8 @@
     @include breakpoint($breakpoint-mobile) {
       grid-template-columns: 1fr;
       gap: 20px;
+      padding-top: 20px;
     }
-
 
     display: grid;
     grid-template-columns: repeat(5, 0.9fr) 1.5fr;
@@ -46,7 +46,9 @@
 
   &__col {
     @include breakpoint($breakpoint-mobile) {
-      border-bottom: 1px solid rgba(82, 82, 82, 1);
+      &:not(:nth-child(5)) {
+        border-bottom: 1px solid rgba(82, 82, 82, 1);
+      }
     }
 
     &.is-active > .nav--footer {
@@ -145,6 +147,10 @@
   }
 
   &__pays {
+    @include breakpoint($breakpoint-tablet) {
+      gap: 5px;
+    }
+
     display: flex;
     gap: 15px;
     align-items: center;
