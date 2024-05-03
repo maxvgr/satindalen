@@ -21,6 +21,7 @@
       }
       @include breakpoint($breakpoint-mobile) {
         grid-template-columns: 1fr;
+        grid-auto-rows: 340px;
         margin-top: 20px;
       }
 
@@ -33,9 +34,9 @@
         // @include breakpoint($breakpoint-tablet-big) {
         //   display: none;
         // }
-        @include breakpoint($breakpoint-tablet) {
-          grid-template-columns: 1fr 1fr;
-        }
+        // @include breakpoint($breakpoint-tablet) {
+        //   grid-template-columns: 1fr 1fr;
+        // }
         @include breakpoint($breakpoint-mobile) {
           grid-template-columns: 1fr;
         }
@@ -44,8 +45,8 @@
 
         .popular__item {
           @include breakpoint($breakpoint-tablet) {
-            height: 350px;
-            max-height: 350px;
+            height: 300px;
+            max-height: 300px;
           }
 
           height: 450px;
@@ -54,12 +55,23 @@
           &:nth-child(3) {
             @include breakpoint($breakpoint-tablet) {
               grid-row: auto;
-              grid-column: 1/2;
+              grid-column: auto;
             }
           }
         }
 
         span {
+          @include breakpoint($breakpoint-tablet) {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+          }
+          @include breakpoint($breakpoint-mobile) {
+            font-weight: 600;
+            font-size: 19px;
+            line-height: 23px;
+          }
+
           color: $color-text__white;
           font-weight: 600;
           font-size: 19px;
@@ -69,9 +81,9 @@
         }
 
         .button {
-          // @include breakpoint($breakpoint-tablet) {
-          //   padding: 15px 28px;
-          // }
+          @include breakpoint($breakpoint-tablet) {
+            padding: 15px 28px;
+          }
 
           margin-top: 71px;
         }

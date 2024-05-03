@@ -20,6 +20,9 @@
       @include breakpoint($breakpoint-tablet-big) {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       }
+      @include breakpoint($breakpoint-mobile) {
+        margin-top: 18px;
+      }
 
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -47,6 +50,12 @@
       }
 
       p {
+        @include breakpoint($breakpoint-mobile) {
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 15.85px;
+        }
+
         font-weight: 600;
         font-size: 19px;
         line-height: 23.16px;

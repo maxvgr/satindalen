@@ -326,6 +326,29 @@
     }
   }
 
+  &__search {
+    .search-form {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background: $palette-white;
+
+      input, button {
+        border: none;
+        outline: none;
+      }
+
+      input {
+        width: 160px;
+      }
+
+      button {
+        background: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+
   &__basket {
     position: relative;
 

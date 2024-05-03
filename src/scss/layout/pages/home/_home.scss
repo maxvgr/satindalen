@@ -13,6 +13,7 @@
     @include breakpoint($breakpoint-mobile) {
       font-size: 19px;
       line-height: 25px;
+      text-align: center;
     }
 
     font-weight: $weight-Regular;

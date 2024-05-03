@@ -37,7 +37,7 @@ new Swiper("#slider .swiper", {
 new Swiper("#best-offers .swiper", {
   modules: [Pagination, Autoplay],
 
-  slidesPerView: 1,
+  slidesPerView: 2,
   spaceBetween: 20,
   // loop: true,
 
@@ -54,7 +54,7 @@ new Swiper("#best-offers .swiper", {
       spaceBetween: 20
     },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 20
     },
     1024: {
@@ -86,7 +86,7 @@ new Swiper("#best-offers .swiper", {
 new Swiper("#brands .swiper", {
   modules: [Pagination, Autoplay],
 
-  slidesPerView: 1.05,
+  slidesPerView: 3.05,
   spaceBetween: 20,
   // loop: true,
 
@@ -99,11 +99,11 @@ new Swiper("#brands .swiper", {
 
   breakpoints: {
     540: {
-      slidesPerView: 2.05,
+      slidesPerView: 3.05,
       spaceBetween: 20
     },
     768: {
-      slidesPerView: 2.05,
+      slidesPerView: 3.05,
       spaceBetween: 20
     },
     1024: {
