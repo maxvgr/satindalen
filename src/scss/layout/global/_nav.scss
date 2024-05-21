@@ -2,21 +2,26 @@
 // В этом файле прописываются все стили относящиеся к блоку навигации
 // -----------------------------------------------------------------------------
 
-.nav {
-  &__list {
+.nav-satin {
+  .nav__list {
     display: flex;
     height: 100%;
   }
 
-  &__item {
+  .nav__item {
+    margin: 0;
+
+    &::before {
+      display: none;
+    }
   }
 
-  &__link {
+  .nav__link {
     display: flex;
     transition: $transition-time ease;
   }
 
-  &--header {
+  &.nav--header {
     height: 100%;
 
      .nav__item {
@@ -44,7 +49,7 @@
     }
   }
 
-  &--footer {
+  &.nav--footer {
     @include breakpoint($breakpoint-mobile) {
       display: none;
 

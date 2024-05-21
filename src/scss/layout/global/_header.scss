@@ -2,7 +2,7 @@
 // В этом файле прописываются все стили относящиеся к шапке сайта
 // -----------------------------------------------------------------------------
 
-#header {
+#header-satin {
   a {
     &.grey-hover {
       display: flex;
@@ -89,10 +89,20 @@
 
     .catalog-menu {
       ul {
+        margin: 0;
         color: $color-text__primary;
         font-weight: 500;
         font-size: 19px;
         line-height: 23.16px;
+
+        li {
+          position: initial;
+          margin: 0;
+
+          &::before {
+            display: none;
+          }
+        }
 
         li:not(:first-child) {
           padding-top: 18px;
@@ -327,6 +337,10 @@
   }
 
   &__search {
+    ul > li {
+      margin: 0;
+    }
+
     .search-form {
       display: flex;
       justify-content: space-between;
@@ -340,6 +354,8 @@
 
       input {
         width: 160px;
+        margin: 0;
+        background: $palette-white;
       }
 
       button {

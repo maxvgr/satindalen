@@ -35,7 +35,7 @@
 
   & > ul {
     position: absolute;
-    z-index: 3;
+    z-index: 10;
     top: calc(100% + 1px);
     right: 0;
     width: 220px;
@@ -45,6 +45,14 @@
 
     opacity: 0;
     visibility: hidden;
+
+    li {
+      margin: 0;
+
+      &::before {
+        display: none;
+      }
+    }
 
     &::before {
       content: "";
@@ -145,7 +153,7 @@
 }
 
 .dropdown-catalog {
-  // position: relative;
+  position: initial;
 
   @media (hover: hover) {
     &:hover {
@@ -185,7 +193,7 @@
 
   & > .catalog-menu {
     position: absolute;
-    z-index: 3;
+    z-index: 10;
     top: 79px;
     left: 0;
     display: grid;
