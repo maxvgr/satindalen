@@ -4,6 +4,7 @@ import LazyLoad from 'vanilla-lazyload';
 
 export const lazyImageController = new LazyLoad({
   elements_selector: '.lazy__item',
+  class_loaded: "imgloader",
 
   callback_loaded: (trigger) => {
     const container = trigger.closest('.lazy');

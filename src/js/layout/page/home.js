@@ -128,7 +128,11 @@ new Swiper("#brands .swiper", {
 
 new Accordion('.accordion-container');
 
+new Accordion('.accordion-second');
+
 new Accordion('.accordion-container1');
+
+// new Accordion('.accordion-container2');
 
 const footertitle01 = document.querySelector(".footer__col--01 .footer__title");
 const footertitle02 = document.querySelector(".footer__col--02 .footer__title");

@@ -39,13 +39,27 @@
             height: auto;
           }
 
+          max-height: 100%;
           opacity: 0.5;
+          filter: grayscale(100%);
           transition: $transition-time ease;
+
+          & > img {
+            @include breakpoint($breakpoint-notebook) {
+              max-height: 150px;
+            }
+            @include breakpoint($breakpoint-mobile) {
+              max-height: 65px;
+            }
+
+            max-height: 165px;
+          }
         }
 
         &:hover {
           picture {
             opacity: 1;
+            // filter: none;
           }
         }
       }
