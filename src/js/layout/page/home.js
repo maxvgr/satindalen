@@ -33,6 +33,34 @@ new Swiper("#slider .swiper", {
 
 });
 
+new Swiper("#catalog .swiper", {
+  modules: [Navigation, Autoplay],
+
+  slidesPerView: 6,
+  // spaceBetween: 160,
+  loop: true,
+
+  speed: 2500,
+
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    1400: {
+      slidesPerView: 6,
+      // spaceBetween: 200,
+    }
+  },
+
+  navigation: {
+    nextEl: "#catalog .swiper-button-next",
+    prevEl: "#catalog .swiper-button-prev",
+  },
+
+});
+
 
 new Swiper("#best-offers .swiper", {
   modules: [Pagination, Autoplay],
@@ -66,7 +94,7 @@ new Swiper("#best-offers .swiper", {
       spaceBetween: 20
     },
     1400: {
-      slidesPerView: 5,
+      slidesPerView: 3.9,
       spaceBetween: 20
     }
   },
@@ -84,7 +112,7 @@ new Swiper("#best-offers .swiper", {
 });
 
 new Swiper("#brands .swiper", {
-  modules: [Pagination, Autoplay],
+  modules: [Navigation, Autoplay],
 
   slidesPerView: 3.05,
   spaceBetween: 20,
@@ -120,9 +148,14 @@ new Swiper("#brands .swiper", {
     }
   },
 
-  pagination: {
-    el: '#brands .swiper-pagination',
-    clickable: true,
+  // pagination: {
+  //   el: '#brands .swiper-pagination',
+  //   clickable: true,
+  // },
+
+  navigation: {
+    nextEl: "#brands .swiper-button-next",
+    prevEl: "#brands .swiper-button-prev",
   },
 });
 

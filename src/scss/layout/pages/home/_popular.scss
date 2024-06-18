@@ -146,6 +146,10 @@
         max-height: 750px;
       }
 
+      &:nth-child(6) {
+        margin-bottom: 50px;
+      }
+
       &:nth-child(8) {
         @include breakpoint($breakpoint-mobile) {
           grid-column: auto;
@@ -154,37 +158,77 @@
         grid-column: 1/3;
       }
 
+      &__link {
+        position: relative;
+      }
+
       picture {
         height: 100%;
 
-        &::before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background: rgba(51, 51, 51, 1);
-          background-position: center;
-          background-size: 100%;
-          opacity: 0.5;
-          transition: $transition-time ease;
+        // &::before {
+        //   content: "";
+        //   position: absolute;
+        //   width: 100%;
+        //   height: 100%;
+        //   background: rgba(51, 51, 51, 1);
+        //   background-position: center;
+        //   background-size: 100%;
+        //   opacity: 0.5;
+        //   transition: $transition-time ease;
+        // }
+      }
+
+      .picture__main {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.8s ease;
+      }
+
+      .picture__second {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.8s ease;
+
+        & > img {
+          filter: invert(90%) blur(2px);
         }
       }
 
+      span {
+        display: block;
+        font-size: 65px;
+        line-height: 70px;
+      }
+
       &:hover {
+        .picture__main {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        .picture__second {
+          opacity: 1;
+          visibility: visible;
+        }
+
         picture {
-          &::before {
-            background: $palette-white;
-            opacity: 1;
-          }
+          // &::before {
+          //   background: $palette-white;
+          //   opacity: 1;
+          // }
         }
 
-        p {
-          color: $color-text__primary;
-        }
+        // p {
+        //   color: $color-text__primary;
+        // }
 
-        span {
-          color: $color-text__primary;
-        }
+        // span {
+        //   color: $color-text__primary;
+        // }
       }
     }
 
