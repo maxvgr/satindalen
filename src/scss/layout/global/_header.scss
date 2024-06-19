@@ -60,9 +60,9 @@
     transition: .5s ease;
 
     &--fixed {
-      @include breakpoint($breakpoint-mobile) {
-        top: -59px;
-      }
+      // @include breakpoint($breakpoint-mobile) {
+      //   top: -59px;
+      // }
 
       position: fixed;
       z-index: 20;
