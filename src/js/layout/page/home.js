@@ -13,7 +13,7 @@ import {
 } from "swiper/modules";
 
 new Swiper("#slider .swiper", {
-  modules: [Navigation, Autoplay],
+  modules: [Pagination, Autoplay],
 
   slidesPerView: 1,
   // spaceBetween: 20,
@@ -26,9 +26,14 @@ new Swiper("#slider .swiper", {
     disableOnInteraction: false,
   },
 
-  navigation: {
-    nextEl: "#slider .swiper-button-next",
-    prevEl: "#slider .swiper-button-prev",
+  // navigation: {
+  //   nextEl: "#slider .swiper-button-next",
+  //   prevEl: "#slider .swiper-button-prev",
+  // },
+
+  pagination: {
+    el: '#slider .swiper-pagination',
+    clickable: true,
   },
 
 });

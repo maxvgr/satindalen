@@ -20,14 +20,18 @@
     &-slide {
       picture {
         @include breakpoint($breakpoint-notebook) {
+          width: 311px;
           height: 311px;
         }
         @include breakpoint($breakpoint-mobile) {
+          width: 155px;
           height: 155px;
         }
 
         overflow: hidden;
-        height: 344px;
+        width: 434px;
+        height: 434px;
+
         transition: 0.6s ease;
 
         img {
@@ -53,10 +57,11 @@
         }
 
         position: absolute;
-        top: 14px;
-        right: 15px;
+        top: 20px;
+        right: 27px;
         display: flex;
         gap: 11px;
+        color: $color-text__white;
       }
 
       &__recomend {
@@ -68,13 +73,19 @@
       &__super {
         padding: 5px 11px;
         border-radius: 3px;
-        background: rgba(225, 171, 130, 1);
+        // background: rgba(225, 171, 130, 1);
+
+        background: rgba(220, 163, 148, 1);
+
       }
 
       &__hit {
         padding: 5px 11px;
         border-radius: 3px;
-        background: rgba(217, 161, 147, 1);
+        // background: rgba(217, 161, 147, 1);
+
+        background: rgba(200, 176, 176, 1);
+
       }
 
       &__info {
@@ -82,9 +93,26 @@
           margin-top: 18px;
           padding-left: 20px;
           color: $link-hover-color;
-          list-style: disc;
+          list-style: none;
           font-size: 15px;
           line-height: 18.29px;
+
+          li {
+            span {
+              position: relative;
+
+              &::before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: -20px;
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                background:  $link-hover-color;
+              }
+            }
+          }
         }
       }
 

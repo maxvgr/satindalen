@@ -19,6 +19,10 @@
   .nav__link {
     display: flex;
     transition: $transition-time ease;
+
+    &:hover {
+      color: $link-hover-color;
+    }
   }
 
   &.nav--header {
@@ -81,9 +85,9 @@
       }
 
       color: $color-text__white;
-      font-weight: 600;
-      font-size: 17px;
-      line-height: 20.72px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
 
       &:hover {
         color: rgba(195, 195, 195, 1);

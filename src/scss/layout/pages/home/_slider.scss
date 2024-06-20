@@ -122,4 +122,27 @@
       background: url("../assets/images/layout/sections/slider/arrow-right.png") right top no-repeat;
     }
   }
+
+  .swiper-pagination {
+    // position: relative;
+
+    bottom: 50px;
+
+    &-bullet {
+      width: 41px;
+      height: 5px;
+      border-radius: 0;
+      background: rgba(235, 235, 235, 1);
+      opacity: 1;
+
+      &-active {
+        // background: rgba(154, 154, 154, 1);
+        // background: rgba(217, 161, 147, 1);
+
+        background: rgba(190, 177, 165, 1);
+
+      }
+    }
+  }
+
 }
