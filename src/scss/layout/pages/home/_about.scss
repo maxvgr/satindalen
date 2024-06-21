@@ -33,13 +33,16 @@
         display: none;
       }
 
-      max-height: 780px;
+      // max-height: 780px;
+
+      margin-bottom: 31px;
     }
   }
 
   &__title {
     @include breakpoint($breakpoint-mobile) {
       padding-bottom: 18px;
+      text-align: left !important;
     }
 
     padding-bottom: 30px;
@@ -115,6 +118,11 @@
       .button {
         @include breakpoint($breakpoint-notebook) {
           margin-bottom: 20px;
+        }
+        @include breakpoint($breakpoint-mobile) {
+          display: flex;
+          justify-content: center;
+          padding: 21px 0;
         }
 
         margin-top: 55px;

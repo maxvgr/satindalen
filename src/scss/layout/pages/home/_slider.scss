@@ -12,6 +12,9 @@
         @include breakpoint($breakpoint-tablet-big) {
           height: 476px;
         }
+        @include breakpoint($breakpoint-mobile) {
+          height: 720px;
+        }
 
         height: 680px;
 
@@ -32,6 +35,7 @@
           top: 90px;
         }
         @include breakpoint($breakpoint-mobile) {
+          top: 30%;
           left: inherit;
           display: flex;
           flex-direction: column;
@@ -82,7 +86,8 @@
 
         .button {
           @include breakpoint($breakpoint-mobile) {
-            background: rgba(41, 41, 41, 0.28);
+            padding: 21px 45px;
+            // background: rgba(41, 41, 41, 0.28);
           }
 
           margin-top: 69px;

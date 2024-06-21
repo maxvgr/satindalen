@@ -47,6 +47,9 @@
   }
 
   &__col {
+    @include breakpoint($breakpoint-tablet) {
+      text-align: left;
+    }
     @include breakpoint($breakpoint-mobile) {
       &:not(:nth-child(5)) {
         border-bottom: 1px solid rgba(82, 82, 82, 1);
@@ -141,9 +144,12 @@
     }
     @include breakpoint($breakpoint-tablet) {
       grid-column: auto;
+      text-align: left;
     }
     @include breakpoint($breakpoint-mobile) {
+      gap: 16px;
       align-items: center;
+      padding-top: 27px;
     }
 
     display: flex;
@@ -238,14 +244,18 @@
   }
 
   &__subscription {
+    @include breakpoint($breakpoint-mobile) {
+      text-align: center;
+    }
+
     // margin-top: 44px;
 
     span {
       display: inline-flex;
       padding-bottom: 12px;
-      font-weight: 600;
-      font-size: 17px;
-      line-height: 20.72px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
     }
 
     .input-mail {
@@ -278,6 +288,7 @@
     }
     @include breakpoint($breakpoint-mobile) {
       align-items: center;
+      padding-top: 41px;
     }
 
     display: flex;

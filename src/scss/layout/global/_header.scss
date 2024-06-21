@@ -31,7 +31,7 @@
     opacity: 1;
 
     transform: translateY(-50%);
-    transition: .3s all;
+    transition: 0.3s all;
   }
 
   &__wrapper {
@@ -49,7 +49,8 @@
     }
     @include breakpoint($breakpoint-mobile) {
       grid-template-columns: 1fr 3fr 1.5fr;
-      height: 59px;
+      height: 50px;
+      min-height: 50px;
     }
 
     display: grid;
@@ -57,7 +58,7 @@
     align-items: center;
     min-height: 88px;
     border-bottom: 1px solid rgba(232, 232, 232, 1);
-    transition: .5s ease;
+    transition: 0.5s ease;
 
     &--fixed {
       // @include breakpoint($breakpoint-mobile) {
@@ -71,7 +72,7 @@
       width: 100%;
       background: $palette-white;
       transform: translateY(100%);
-      transition: .5s ease;
+      transition: 0.5s ease;
     }
   }
 
@@ -125,9 +126,7 @@
         padding-bottom: 15px;
         font-weight: 600;
       }
-
     }
-
   }
 
   &__line {
@@ -160,7 +159,7 @@
     .menu-mobile {
       padding: 0 27px 40px 15px;
 
-      & > ul > li  {
+      & > ul > li {
         margin: 4px 0 4px 8px;
         color: rgba(89, 89, 89, 1);
         font-weight: 400;
@@ -178,16 +177,15 @@
         }
       }
 
-
       .ac {
         margin: 0;
         border: none;
 
-         &::before {
+        &::before {
           display: none;
-         }
+        }
 
-         & > .ac-header > .ac-trigger {
+        & > .ac-header > .ac-trigger {
           padding: 9px 32px 9px 8px;
           color: rgba(89, 89, 89, 1);
           font-weight: 400;
@@ -197,7 +195,7 @@
           text-transform: uppercase;
 
           &::after {
-            content: '';
+            content: "";
             width: 9px;
             height: 17px;
             background-image: url("data:image/svg+xml,%3Csvg width='11' height='19' viewBox='0 0 11 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L9.5 9.5L1 18' stroke='%23ADADAD'/%3E%3C/svg%3E");
@@ -221,7 +219,7 @@
           // text-transform: none;
 
           &::after {
-            content: '';
+            content: "";
             width: 9px;
             height: 17px;
             background-image: url("data:image/svg+xml,%3Csvg width='11' height='19' viewBox='0 0 11 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L9.5 9.5L1 18' stroke='%23ADADAD'/%3E%3C/svg%3E");
@@ -236,8 +234,6 @@
           top: 0;
           // transform: rotate(90deg);
         }
-
-
 
         & > .ac-panel > .ac-text {
           display: flex;
@@ -255,6 +251,7 @@
 
             & > a {
               color: rgba(89, 89, 89, 1) !important;
+              text-transform: none;
             }
 
             &::before {
@@ -318,14 +315,26 @@
       //   }
       // }
     }
-
-
   }
 
   &__burger {
     @include breakpoint($breakpoint-tablet-big) {
       z-index: 20;
       display: block;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      .hamburger-box {
+        width: 18px;
+        height: 14px;
+      }
+
+      .hamburger-inner::before {
+        top: -7px;
+      }
+
+      .hamburger-inner::after {
+        bottom: -7px;
+      }
     }
 
     display: none;
@@ -395,6 +404,10 @@
     }
 
     .phone-button {
+      @include breakpoint($breakpoint-tablet) {
+        height: 20px;
+      }
+
       position: relative;
       transition: $transition-time ease;
     }
@@ -433,6 +446,8 @@
   }
 
   &__search {
+    order: 1;
+
     ul > li {
       margin: 0;
     }
@@ -442,6 +457,10 @@
     }
 
     .search-button {
+      @include breakpoint($breakpoint-tablet) {
+        height: 20px;
+      }
+
       position: relative;
       transition: $transition-time ease;
     }
@@ -472,7 +491,8 @@
       padding: 10px;
       background: $palette-white;
 
-      input, button {
+      input,
+      button {
         border: none;
         outline: none;
       }
@@ -492,6 +512,7 @@
 
   &__basket {
     position: relative;
+    order: 2;
 
     .basket-goods {
       position: absolute;
@@ -514,6 +535,10 @@
     }
 
     .basket-button {
+      @include breakpoint($breakpoint-tablet) {
+        height: 20px;
+      }
+
       position: relative;
       transition: $transition-time ease;
     }
@@ -541,9 +566,7 @@
         background: $color-text__active;
       }
     }
-
   }
-
 
   &__login {
     @include breakpoint($breakpoint-notebook) {

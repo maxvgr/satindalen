@@ -70,7 +70,7 @@ new Swiper("#catalog .swiper", {
 new Swiper("#best-offers .swiper", {
   modules: [Pagination, Autoplay],
 
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 20,
   // loop: true,
 
@@ -86,7 +86,7 @@ new Swiper("#best-offers .swiper", {
       slidesPerView: 2,
       spaceBetween: 20
     },
-    768: {
+    800: {
       slidesPerView: 3,
       spaceBetween: 20
     },
@@ -169,6 +169,7 @@ new Accordion('.accordion-container');
 new Accordion('.accordion-second');
 
 new Accordion('.accordion-container1');
+new Accordion('.accordion-container-about');
 
 // new Accordion('.accordion-container2');
 

@@ -1,4 +1,8 @@
 #brands {
+  @include breakpoint($breakpoint-mobile) {
+    display: none;
+  }
+
   .container {
     @include breakpoint($breakpoint-notebook) {
       padding: 0 30px;
@@ -86,6 +90,7 @@
   .swiper-button-prev,
   .swiper-button-next {
     top: var(--swiper-navigation-top-offset, 50%);
+    background-color: transparent;
     color: $palette-black;
   }
 
@@ -93,8 +98,14 @@
     left: var(--swiper-navigation-sides-offset, 0);
 }
 
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: transparent;
+}
+
   .swiper-button-prev::after,
   .swiper-button-next::after {
+    background: none !important;
     font-size: 24px;
   }
 }

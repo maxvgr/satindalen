@@ -1,11 +1,20 @@
 #catalog {
   .container {
+    @include breakpoint($breakpoint-notebook) {
+        max-width: calc(100% - 55px);
+        margin: 0 30px;
+    }
     @include breakpoint($breakpoint-tablet) {
       padding: 25px 0 25px 15px;
     }
+    @include breakpoint($breakpoint-mobile) {
+      max-width: calc(100% - 22px);
+      margin: 0 6px;
+      padding: 25px 0 25px 10px;
+    }
 
-    max-width: calc(100% - 15px);
-    margin: 0;
+    max-width: calc(100% - 125px);
+    margin: 0 60px;
     padding: 60px 0;
 
     &.swiper {
@@ -18,11 +27,16 @@
   .catalog__mobile {
     @include breakpoint($breakpoint-tablet) {
       display: block;
+
     }
 
     display: none;
 
-    .button-primary {
+    .button-black {
+      @include breakpoint($breakpoint-tablet) {
+        padding: 18px 64px;
+      }
+
       display: flex;
       justify-content: center;
     }
@@ -64,6 +78,9 @@
         &:not(:first-child) {
           padding-top: 20px;
         }
+      }
+      @include breakpoint($breakpoint-mobile) {
+        padding-left: 0;
       }
 
       // max-width: 120px;
@@ -156,11 +173,18 @@
   .swiper-button-prev,
   .swiper-button-next {
     top: var(--swiper-navigation-top-offset, 40%);
+    background-color: transparent;
     color: $palette-black;
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background-color: transparent;
   }
 
   .swiper-button-prev::after,
   .swiper-button-next::after {
+    background: none !important;
     font-size: 24px;
   }
 }
