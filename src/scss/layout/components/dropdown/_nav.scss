@@ -1,7 +1,7 @@
 .dropdown-nav {
   position: relative;
 
-  @media (hover: hover) {
+  // @media (hover: hover) {
     &:hover {
       background: rgba(239, 239, 239, 1);
 
@@ -10,7 +10,7 @@
         visibility: visible;
       }
     }
-  }
+  // }
 
   ul {
     width: 100%;

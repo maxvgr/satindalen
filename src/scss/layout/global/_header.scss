@@ -67,7 +67,9 @@
 
       position: fixed;
       z-index: 20;
-      top: -88px;
+      // top: -88px;
+
+      top: -50px;
       left: 0;
       width: 100%;
       background: $palette-white;
@@ -372,6 +374,9 @@
     height: 100%;
 
     a {
+      @include breakpoint($breakpoint-laptop) {
+        font-size: 15px;
+      }
       @include breakpoint($breakpoint-notebook) {
         padding: 0;
       }
@@ -413,6 +418,10 @@
     }
 
     .phone-button-active {
+      @include breakpoint($breakpoint-tablet) {
+        height: 20px;
+      }
+
       position: absolute;
       z-index: 1;
       // top: 0;
@@ -466,6 +475,10 @@
     }
 
     .search-button-active {
+      @include breakpoint($breakpoint-tablet) {
+        height: 20px;
+      }
+
       position: absolute;
       z-index: 1;
       opacity: 0;
@@ -544,6 +557,10 @@
     }
 
     .basket-button-active {
+      @include breakpoint($breakpoint-tablet) {
+        height: 20px;
+      }
+
       position: absolute;
       z-index: 1;
       opacity: 0;
@@ -569,6 +586,9 @@
   }
 
   &__login {
+    @include breakpoint($breakpoint-laptop) {
+      font-size: 15px;
+    }
     @include breakpoint($breakpoint-notebook) {
       p {
         display: none;

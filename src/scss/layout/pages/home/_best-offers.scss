@@ -104,6 +104,9 @@
       }
 
       &__info {
+        // display: flex;
+        // min-height: 100px;
+
         ul {
           margin-top: 18px;
           padding-left: 20px;
@@ -137,6 +140,7 @@
           font-size: 16px;
         }
 
+        min-height: 60px;
         padding: 9px 0 18px;
         font-weight: 600;
         font-size: 17px;
