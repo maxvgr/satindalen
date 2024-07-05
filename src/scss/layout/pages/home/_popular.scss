@@ -292,7 +292,7 @@
       height: 100%;
       padding: 0 20px;
 
-      p {
+      &--title {
         @include breakpoint($breakpoint-notebook) {
           font-size: 33px;
           line-height: 47px;
@@ -311,6 +311,30 @@
         font-size: 37px;
         font-family: $font-title;
         line-height: 50.14px;
+        text-align: center;
+        transition: $transition-time ease;
+      }
+
+      &--text {
+        @include breakpoint($breakpoint-tablet-big) {
+          font-size: 18px;
+          line-height: 25px;
+        }
+        @include breakpoint($breakpoint-tablet) {
+          font-size: 12px;
+          line-height: 12px;
+        }
+        @include breakpoint($breakpoint-mobile) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+
+        padding-top: 10px;
+        color: $color-text__white;
+        font-weight: $weight-Regular;
+        font-size: 20px;
+        font-family: $font-default;
+        line-height: 30px;
         text-align: center;
         transition: $transition-time ease;
       }
