@@ -36,6 +36,9 @@
       }
 
       .nav__link {
+        @include breakpoint($breakpoint-laptop) {
+          font-size: 15px;
+        }
         @include breakpoint($breakpoint-notebook) {
           padding: 0 6px;
         }
