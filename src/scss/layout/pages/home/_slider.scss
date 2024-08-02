@@ -6,6 +6,11 @@
 
   .swiper {
     &-slide {
+      @include breakpoint($breakpoint-mobile) {
+        display: flex;
+        justify-content: center;
+      }
+
       position: relative;
 
       picture {
@@ -37,7 +42,7 @@
         }
         @include breakpoint($breakpoint-mobile) {
           top: 30%;
-          left: inherit;
+          left: unset;
           display: flex;
           flex-direction: column;
           align-items: center;
