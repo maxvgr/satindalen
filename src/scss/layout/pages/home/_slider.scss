@@ -13,6 +13,7 @@
           height: 476px;
         }
         @include breakpoint($breakpoint-mobile) {
+          width: 100%;
           height: 720px;
         }
 
