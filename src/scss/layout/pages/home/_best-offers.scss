@@ -85,6 +85,21 @@
         background: rgba(222, 194, 154, 1);
       }
 
+      &__discont {
+        padding: 5px 11px;
+        border-radius: 3px;
+        background: #C9A4A4;
+      }
+
+      &__new {
+        padding: 5px 11px;
+        border-radius: 3px;
+        background: $palette-white;
+        color: #292929;
+        opacity: 0.7;
+
+      }
+
       &__super {
         padding: 5px 11px;
         border-radius: 3px;
