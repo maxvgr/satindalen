@@ -99,7 +99,7 @@ new Swiper("#best-offers .swiper", {
       spaceBetween: 20
     },
     1400: {
-      slidesPerView: 3.9,
+      slidesPerView: 4,
       spaceBetween: 20
     }
   },
@@ -111,6 +111,55 @@ new Swiper("#best-offers .swiper", {
 
   pagination: {
     el: '#best-offers .swiper-pagination',
+    clickable: true,
+    // type: 'custom',
+  },
+});
+
+new Swiper("#best-offers-second .swiper", {
+  modules: [Pagination, Autoplay],
+
+  slidesPerView: 1,
+  spaceBetween: 20,
+  // loop: true,
+
+  speed: 1900,
+
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    540: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    800: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    },
+    1400: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    }
+  },
+
+  // navigation: {
+  //   nextEl: "#best-offers .swiper-button-next",
+  //   prevEl: "#best-offers .swiper-button-prev",
+  // },
+
+  pagination: {
+    el: '#best-offers-second .swiper-pagination',
     clickable: true,
     // type: 'custom',
   },
