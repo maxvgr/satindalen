@@ -16,4 +16,8 @@
   &__body {
     overflow: clip;
   }
+
+  &.noscroll {
+    overflow-y: hidden;
+  }
 }

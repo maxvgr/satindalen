@@ -133,8 +133,10 @@
   }
 
   &__line {
-    margin-top: 79px;
-    border-top: 1px solid rgba(232, 232, 232, 1);
+    display: flex;
+    align-items: center;
+    height: 79px;
+    border-bottom: 1px solid #e8e8e8;
   }
 
   &__menu-mobile {
@@ -271,13 +273,19 @@
       top: 0;
       left: 0;
       display: none;
+      overflow: hidden;
+      overflow-y: auto;
       width: 100%;
-      height: 1000%;
+      height: 100vh;
       // background: rgba(255, 255, 255, 0.5);
+
+
 
       background: rgba(58, 67, 74, 0.7);
       opacity: 0;
       // backdrop-filter: blur(1px);
+
+
 
       &.is-active {
         display: block;
@@ -322,7 +330,8 @@
 
   &__burger {
     @include breakpoint($breakpoint-tablet-big) {
-      z-index: 20;
+      // z-index: 20;
+
       display: block;
     }
     @include breakpoint($breakpoint-mobile) {
