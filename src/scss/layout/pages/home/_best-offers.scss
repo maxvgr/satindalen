@@ -100,7 +100,9 @@
 
       &__marks {
         @include breakpoint($breakpoint-mobile) {
-          // font-size: 11px;
+          top: 15px;
+          right: 15px;
+          font-size: 12px;
         }
 
         position: absolute;

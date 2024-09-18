@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 #header-satin {
-  position: relative;
+  // position: relative;
 
   a {
     &.grey-hover {
@@ -61,9 +61,9 @@
     transition: 0.5s ease;
 
     &--fixed {
-      // @include breakpoint($breakpoint-mobile) {
-      //   top: -59px;
-      // }
+      @include breakpoint($breakpoint-mobile) {
+        top: -50px;
+      }
 
       position: fixed;
       z-index: 20;
@@ -166,7 +166,9 @@
 
       & > ul > li {
         margin: 4px 0 4px 8px;
-        color: rgba(89, 89, 89, 1);
+        // color: rgba(89, 89, 89, 1);
+
+        color: #595959;
         font-weight: 400;
         font-size: 15px;
         font-family: $font-default;
@@ -174,7 +176,9 @@
         text-transform: uppercase;
 
         & > a {
-          color: rgba(89, 89, 89, 1);
+          // color: rgba(89, 89, 89, 1);
+
+          color: #595959;
         }
 
         &::before {
@@ -192,7 +196,9 @@
 
         & > .ac-header > .ac-trigger {
           padding: 9px 32px 9px 8px;
-          color: rgba(89, 89, 89, 1);
+          // color: rgba(89, 89, 89, 1);
+
+          color: #595959;
           font-weight: 400;
           font-size: 15px;
           font-family: $font-default;
@@ -218,8 +224,10 @@
 
         & .ac .ac-trigger {
           padding: 0;
-          font-weight: 500;
-          font-size: 13px;
+          font-weight: 400;
+          // font-size: 13px;
+
+          font-size: 15px;
           line-height: 15.85px;
           // text-transform: none;
 
@@ -244,10 +252,14 @@
           display: flex;
           flex-direction: column;
           gap: 10px;
-          padding-left: 15px;
-          color: rgba(89, 89, 89, 1) !important;
-          font-weight: 500;
-          font-size: 13px;
+          padding-left: 16px;
+          // color: rgba(89, 89, 89, 1) !important;
+
+          color: #595959 !important;
+          font-weight: 400;
+          // font-size: 13px;
+
+          font-size: 15px;
           font-family: $font-default;
           line-height: 15.85px;
 
@@ -255,7 +267,9 @@
             margin: 0;
 
             & > a {
-              color: rgba(89, 89, 89, 1) !important;
+              // color: rgba(89, 89, 89, 1) !important;
+
+              color: #595959 !important;
               text-transform: none;
             }
 
