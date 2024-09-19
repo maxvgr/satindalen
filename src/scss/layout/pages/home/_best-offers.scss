@@ -122,7 +122,7 @@
       &__discont {
         padding: 5px 11px;
         border-radius: 3px;
-        background: #c9a4a4;
+        background: $link-hover-color;
       }
 
       &__new {
@@ -219,7 +219,7 @@
         &-active {
           // background: rgba(154, 154, 154, 1);
 
-          background: rgba(217, 161, 147, 1);
+          background: $link-hover-color;
         }
       }
     }

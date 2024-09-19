@@ -217,7 +217,7 @@ new Accordion('.accordion-container');
 
 new Accordion('.accordion-second');
 
-new Accordion('.accordion-container1');
+// new Accordion('.accordion-container1');
 new Accordion('.accordion-container-about');
 
 // new Accordion('.accordion-container2');
