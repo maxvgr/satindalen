@@ -213,12 +213,21 @@ new Swiper("#brands .swiper", {
   },
 });
 
-new Accordion('.accordion-container');
+if (document.querySelector('.accordion-container')) {
+  new Accordion('.accordion-container');
+};
 
-new Accordion('.accordion-second');
+if (document.querySelector('.accordion-second')) {
+  new Accordion('.accordion-second');
+};
 
-// new Accordion('.accordion-container1');
-new Accordion('.accordion-container-about');
+if (document.querySelector('.accordion-container1')) {
+  new Accordion('.accordion-container1');
+};
+
+if (document.querySelector('.accordion-container-about')) {
+  new Accordion('.accordion-container-about');
+};
 
 // new Accordion('.accordion-container2');
 

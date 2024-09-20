@@ -14,20 +14,24 @@ const mobileNavs = document.querySelector(".header__menu-mobile");
 const overlay = document.querySelector(".header__menu-mobile--overlay");
 const body = document.querySelector(".page");
 
-hamburger.addEventListener("click", () => {
-  // hamburger.classList.toggle("is-active");
-  // hamburger2.classList.toggle("is-active");
-  mobileNavs.classList.toggle("is-active");
-  overlay.classList.toggle("is-active");
-  body.classList.toggle("noscroll");
-});
+if (document.querySelector('.hamburger--spin')) {
+  hamburger.addEventListener("click", () => {
+    // hamburger.classList.toggle("is-active");
+    // hamburger2.classList.toggle("is-active");
+    mobileNavs.classList.toggle("is-active");
+    overlay.classList.toggle("is-active");
+    body.classList.toggle("noscroll");
+  });
+};
 
-hamburger2.addEventListener("click", () => {
-  // hamburger2.classList.toggle("is-active");
-  mobileNavs.classList.toggle("is-active");
-  overlay.classList.toggle("is-active");
-  body.classList.toggle("noscroll");
-});
+if (document.querySelector('.hamburger--squeeze')) {
+  hamburger2.addEventListener("click", () => {
+    // hamburger2.classList.toggle("is-active");
+    mobileNavs.classList.toggle("is-active");
+    overlay.classList.toggle("is-active");
+    body.classList.toggle("noscroll");
+  });
+};
 
 
 document.addEventListener('DOMContentLoaded', () => {
