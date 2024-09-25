@@ -19,6 +19,8 @@
     transition: $transition-time ease;
   }
 
+
+
   & > a,
   & > span {
     display: flex;
@@ -286,6 +288,15 @@
           text-transform: none;
         }
       }
+
+      a.link {
+        color: $color-text__primary;
+        transition: $transition-time ease;
+
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
     }
 
 
@@ -298,6 +309,7 @@
       // padding: 12px 20px;
       // color: #231f20;
 
+      color: $color-text__primary;
       transition: $transition-time ease;
 
       @media (hover: hover) {
