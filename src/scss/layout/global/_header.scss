@@ -330,7 +330,9 @@
     &.is-active {
       z-index: 20;
       left: 0;
+      min-width: 320px;
       height: auto;
+
       // padding: 65px 70px 50px 37px;
 
       opacity: 1;
