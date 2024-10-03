@@ -263,3 +263,21 @@ if (document.querySelector('.footer__col--04')) {
     footernav04.classList.toggle("is-active");
   });
 };
+
+// скрывает остальные пункты мобильного меню, кроме открытого
+const elsP = document.querySelectorAll('.ac');
+
+for (let i = 0, length = elsP.length; i < length; i++) {
+  elsP[i].addEventListener("click", () => {
+    if (document.querySelector('.accordion-container > .ac.is-active')) {
+      const element = document.querySelector('.accordion-container > .is-active');
+      const parent = element.parentNode;
+      parent.classList.toggle("hidden");
+    }
+    else {
+      const parentall = document.querySelector('.accordion-container');
+      parentall.classList.toggle("hidden");
+    };
+  });
+}
+
