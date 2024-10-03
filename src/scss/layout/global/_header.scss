@@ -217,9 +217,21 @@
           }
         }
 
-        &.is-active > .ac-header > .ac-trigger::after {
-          top: 10px;
-          transform: rotate(90deg);
+        &.is-active > .ac-header > .ac-trigger {
+          padding: 9px 32px 9px 28px;
+
+          &::after {
+            top: 10px;
+            left: 10px;
+            // transform: rotate(90deg);
+
+            transform: rotate(180deg)
+          }
+
+          &.ac.is-active > .ac-header > .ac-trigger {
+
+
+          }
         }
 
         & .ac .ac-trigger {
@@ -243,9 +255,17 @@
           }
         }
 
-        & .ac.is-active .ac-header > .ac-trigger::after {
-          top: 0;
-          // transform: rotate(90deg);
+        & .ac.is-active .ac-header > .ac-trigger {
+          padding: 9px 32px 9px 8px;
+
+          &::after {
+            top: 8px;
+            right: 10px;
+            left: unset;
+            transform: rotate(90deg);
+
+            // transform: rotate(180deg)
+          }
         }
 
         & > .ac-panel > .ac-text {
