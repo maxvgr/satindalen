@@ -135,8 +135,13 @@
   &__line {
     display: flex;
     align-items: center;
-    height: 79px;
+    justify-content: space-between;
+    // height: 79px;
+
+    height: 48px;
+    padding: 10px;
     border-bottom: 1px solid #e8e8e8;
+
   }
 
   &__menu-mobile {
@@ -151,12 +156,11 @@
     left: -500px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    // gap: 20px;
+
     width: auto;
     height: 100%;
     padding: 0;
-    // border-top: 1px solid rgba(232, 232, 232, 1);
-
     background: $palette-white;
     opacity: 0;
     transition: 0.6s ease;
@@ -166,8 +170,6 @@
 
       & > ul > li {
         margin: 4px 0 4px 8px;
-        // color: rgba(89, 89, 89, 1);
-
         color: #595959;
         font-weight: 400;
         font-size: 15px;
@@ -176,8 +178,6 @@
         text-transform: uppercase;
 
         & > a {
-          // color: rgba(89, 89, 89, 1);
-
           color: #595959;
         }
 
@@ -196,8 +196,6 @@
 
         & > .ac-header > .ac-trigger {
           padding: 16px 32px 16px 22px;
-          // color: rgba(89, 89, 89, 1);
-
           color: #595959;
           font-weight: 400;
           font-size: 15px;
@@ -207,6 +205,7 @@
 
           &::after {
             content: "";
+            right: 22px;
             width: 9px;
             height: 17px;
             background-image: url("data:image/svg+xml,%3Csvg width='11' height='19' viewBox='0 0 11 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L9.5 9.5L1 18' stroke='%23ADADAD'/%3E%3C/svg%3E");
@@ -218,14 +217,9 @@
         }
 
         & .ac .ac-trigger {
-          // padding: 0;
-
           font-weight: 400;
-          // font-size: 13px;
-
           font-size: 15px;
           line-height: 15.85px;
-          // text-transform: none;
 
           &::after {
             content: "";
@@ -240,7 +234,7 @@
         }
 
         & .ac.is-active .ac-header > .ac-trigger {
-          padding: 16px 32px 16px 22px;
+          padding: 16px 32px 16px 47px;
 
           &::after {
             top: 15px;
@@ -263,7 +257,7 @@
 
           & > li {
             margin: 0;
-            padding: 16px 22px;
+            padding: 16px 47px;
 
             &:not(:last-child) {
               border-bottom: 1px solid #ebe4de;
@@ -296,29 +290,40 @@
       }
 
       .accordion-container > .ac.is-active > .ac-header > .ac-trigger {
-        padding: 16px 32px 16px 28px;
+        padding: 16px 32px 16px 47px;
         background: #ebe4de;
         font-weight: 600;
 
         &::after {
           top: 17px;
-          left: 10px;
+          left: 22px;
           transform: rotate(180deg);
         }
       }
 
       .accordion-second {
         padding: 0 !important;
-      }
 
-      .accordion-second > .ac > .ac-panel > .ac-text > li {
-        border-bottom: 1px solid $palette-white;
-        background: #f8f6f5;
+        & > .ac > .ac-header > .ac-trigger {
+          padding-left: 47px;
+          text-transform: none;
+        }
 
-        & > a {
-          color: #808080 !important;
+        & > .ac.is-active > .ac-header > .ac-trigger {
+          color: #333333;
+        }
+
+        & > .ac > .ac-panel > .ac-text > li {
+          border-bottom: 1px solid $palette-white;
+          background: #f8f6f5;
+
+          & > a {
+            color: #808080 !important;
+          }
         }
       }
+
+
     }
 
     &--overlay {
@@ -356,27 +361,20 @@
     // }
 
     &.is-active {
+      @include breakpoint($breakpoint-mobile) {
+        min-width: 100%;
+        height: 100%;
+      }
+
       z-index: 20;
       left: 0;
-      min-width: 320px;
+      min-width: 400px;
       height: auto;
-
-      // padding: 65px 70px 50px 37px;
-
       opacity: 1;
-      // transition: 0.8s ease;
+    }
 
-      // .nav__list {
-      //   flex-direction: column;
-      //   gap: 10px;
-
-      //   a {
-      //     color: rgba(0, 103, 102, 1);
-      //     font-weight: 600;
-      //     font-size: 18px;
-      //     line-height: 21.94px;
-      //   }
-      // }
+    .header__burger > button {
+      padding: 10px;
     }
   }
 
@@ -402,7 +400,7 @@
     }
 
     display: none;
-    padding-left: 20px;
+    padding-left: 10px;
   }
 
   &__logo {
@@ -659,9 +657,9 @@
         display: none;
       }
     }
-    @include breakpoint($breakpoint-mobile) {
-      display: none;
-    }
+    // @include breakpoint($breakpoint-mobile) {
+    //   display: none;
+    // }
 
     height: 100%;
 
