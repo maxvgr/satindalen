@@ -272,11 +272,11 @@ for (let i = 0, length = elsP.length; i < length; i++) {
     if (document.querySelector('.accordion-container > .ac.is-active')) {
       const element = document.querySelector('.accordion-container > .is-active');
       const parent = element.parentNode;
-      parent.classList.toggle("hidden");
+      parent.classList.toggle("hidden-satin");
     }
     else {
       const parentall = document.querySelector('.accordion-container');
-      parentall.classList.toggle("hidden");
+      parentall.classList.toggle("hidden-satin");
     };
   });
 }
