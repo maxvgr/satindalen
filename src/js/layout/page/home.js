@@ -217,9 +217,11 @@ if (document.querySelector('.accordion-container')) {
   new Accordion('.accordion-container');
 };
 
-if (document.querySelector('.accordion-second')) {
-  new Accordion('.accordion-second');
-};
+const accordionsecond = document.querySelectorAll('.accordion-second');
+
+for (const accordion of accordionsecond) {
+  new Accordion(accordion);
+}
 
 if (document.querySelector('.accordion-container1')) {
   new Accordion('.accordion-container1');

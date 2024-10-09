@@ -312,7 +312,18 @@
       .accordion-second {
         padding: 0 !important;
 
+        & > .ac > .ac-panel  {
+          height: 0;
+          visibility: hidden;
+        }
+
+        & > .ac.is-active > .ac-panel  {
+          height: auto;
+          visibility: visible;
+        }
+
         & > .ac > .ac-header > .ac-trigger {
+          padding-bottom: 16px;
           padding-left: 47px;
           text-transform: none;
         }
