@@ -282,12 +282,8 @@
         }
       }
 
-      // .accordion-container > .ac:not(:last-child) > .ac-header,
-      // .accordion-container > li:not(:last-child) > .ac-header {
-      //   border-bottom: 1px solid #ebe4de;
-      // }
-
       .accordion-container > li:not(:last-child) {
+        margin-left: 0;
         border-bottom: 1px solid #ebe4de;
       }
 
@@ -297,6 +293,7 @@
 
       .accordion-container.hidden-satin > li.is-active {
         display: block;
+        padding-bottom: 0;
       }
 
       .accordion-container > .ac.is-active > .ac-header > .ac-trigger {
