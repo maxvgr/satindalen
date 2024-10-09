@@ -169,7 +169,8 @@
       padding: 0;
 
       & > ul > li {
-        margin: 4px 0 4px 8px;
+        margin-top: 16px;
+        padding-bottom: 16px;
         color: #595959;
         font-weight: 400;
         font-size: 15px;
@@ -178,6 +179,7 @@
         text-transform: uppercase;
 
         & > a {
+          padding: 16px 42px 16px 22px;
           color: #595959;
         }
 
@@ -195,7 +197,7 @@
         }
 
         & > .ac-header > .ac-trigger {
-          padding: 16px 42px 16px 22px;
+          padding: 16px 42px 0 22px;
           color: #595959;
           font-weight: 400;
           font-size: 15px;
@@ -205,6 +207,7 @@
 
           &::after {
             content: "";
+            top: 25px;
             right: 22px;
             width: 9px;
             height: 17px;
@@ -277,15 +280,20 @@
         }
       }
 
-      .accordion-container > .ac:not(:last-child) > .ac-header {
+      // .accordion-container > .ac:not(:last-child) > .ac-header,
+      // .accordion-container > li:not(:last-child) > .ac-header {
+      //   border-bottom: 1px solid #ebe4de;
+      // }
+
+      .accordion-container > li:not(:last-child) {
         border-bottom: 1px solid #ebe4de;
       }
 
-      .accordion-container.hidden-satin > .ac {
+      .accordion-container.hidden-satin > li {
         display: none;
       }
 
-      .accordion-container.hidden-satin > .ac.is-active {
+      .accordion-container.hidden-satin > li.is-active {
         display: block;
       }
 
