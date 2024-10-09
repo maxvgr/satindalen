@@ -169,8 +169,9 @@
       padding: 0;
 
       & > ul > li {
-        margin-top: 16px;
+        padding-top: 16px;
         padding-bottom: 16px;
+        background-color: $palette-white;
         color: #595959;
         font-weight: 400;
         font-size: 15px;
@@ -179,7 +180,7 @@
         text-transform: uppercase;
 
         & > a {
-          padding: 16px 42px 16px 22px;
+          padding: 0 42px 16px 22px;
           color: #595959;
         }
 
@@ -197,7 +198,7 @@
         }
 
         & > .ac-header > .ac-trigger {
-          padding: 16px 42px 0 22px;
+          padding: 0 42px 0 22px;
           color: #595959;
           font-weight: 400;
           font-size: 15px;
@@ -207,7 +208,8 @@
 
           &::after {
             content: "";
-            top: 25px;
+            // top: 25px;
+
             right: 22px;
             width: 9px;
             height: 17px;
@@ -323,6 +325,7 @@
         }
 
         & > .ac > .ac-header > .ac-trigger {
+          padding-top: 16px;
           padding-bottom: 16px;
           padding-left: 47px;
           text-transform: none;
